@@ -2,6 +2,12 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 7000;
 
+app.get("/", (req, res) => {
+  res.json({
+    welcome: "HIIII!!!",
+  });
+});
+
 app.get("/api", (req, res) => {
   const slack_name = req.query.slack_name;
   const track = req.query.track;
@@ -36,6 +42,12 @@ app.get("/api", (req, res) => {
   };
 
   res.json(response);
+});
+
+app.get("*", (req, res) => {
+  res.status(404).json({
+    message: "Not Found!",
+  });
 });
 
 app.listen(port, () => {
