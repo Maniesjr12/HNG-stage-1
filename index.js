@@ -36,7 +36,7 @@ app.get("/api", (req, res) => {
     "Saturday",
   ];
   const currentDay = days[currentDate.getUTCDay()];
-  const utcTime = currentDate.toISOString().slice(0, -5);
+  const utcTime = new Date().toISOString().slice(0, -5) + "Z";
 
   const response = {
     slack_name,
