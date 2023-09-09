@@ -10,7 +10,7 @@ app.use(
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.json({
+  res.send({
     welcome: "HIIII!!!",
   });
 });
@@ -22,7 +22,7 @@ app.get("/api", (req, res) => {
   if (!slack_name || !track) {
     return res
       .status(400)
-      .json({ error: "Both slack_name and track parameters are required!" });
+      .send({ error: "Both slack_name and track parameters are required!" });
   }
 
   const currentDate = new Date();
