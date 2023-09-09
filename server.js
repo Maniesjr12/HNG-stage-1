@@ -2,6 +2,13 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 7000;
 
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.json({
     welcome: "HIIII!!!",
@@ -36,7 +43,7 @@ app.get("/api", (req, res) => {
     current_day: currentDay,
     utc_time: utcTime,
     track,
-    github_file_url: "https://github.com/username/repo/blob/main/server.js",
+    github_file_url: "https://github.com/Maniesjr12/HNG-stage-1",
     github_repo_url: "https://github.com/username/repo",
     status_code: 200,
   };
