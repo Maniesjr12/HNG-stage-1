@@ -16,4 +16,10 @@ router.post("/persons", createPerson);
 
 router.delete("/persons/:id", deletePerson);
 
+router.get("*", (req, res) => {
+  res.status(404).json({
+    message: "Not Found!",
+  });
+});
+
 module.exports = router;
