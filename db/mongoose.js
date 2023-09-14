@@ -4,6 +4,9 @@ async function mongooseConnect() {
   const Mongo =
     process.env.CONNECTION_STRING || "mongodb://localhost:27017/mydatabase";
 
+  //   const mongo =
+  //     "mongodb+srv://dbUser:Nano1234567@cluster01.jtu1vi3.mongodb.net/?retryWrites=true&w=majority";
+
   await mongoose.connect(Mongo, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
