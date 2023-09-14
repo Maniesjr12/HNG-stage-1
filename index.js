@@ -1,6 +1,9 @@
 const express = require("express");
+const { mongooseConnect } = require("./db/mongoose");
 const app = express();
 const port = process.env.PORT || 7000;
+
+const personRoute = require("./routes/person/person.routes");
 
 app.use(
   express.urlencoded({
@@ -8,6 +11,8 @@ app.use(
   })
 );
 app.use(express.json());
+
+app.use("/api", personRoute);
 
 app.get("/", (req, res) => {
   res.send({
@@ -59,4 +64,5 @@ app.get("*", (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
+  mongooseConnect();
 });
