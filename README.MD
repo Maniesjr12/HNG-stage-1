@@ -31,7 +31,7 @@ Clone this repository to get a copy of the Person API on your local machine for 
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-repo-link/person-api.git
+git clone https://github.com/Maniesjr12/HNG-stage-1.git
 cd person-api
 ```
 
@@ -51,7 +51,7 @@ npm install
 npm start
 ```
 
-6. The API will be accessible at `http://localhost:7000`.
+6. The API will be accessible at `https://hng-stage-1s.vercel.app/`.
 
 ## Running the Tests
 
@@ -70,8 +70,6 @@ For more detailed usage and examples, refer to the API documentation.
 
 ## UML Diagrams
 
-Links to UML diagrams for this project:
+Link to UML diagrams for this project:
 
-- [Data Model](your-link-to-data-model)
-- [Controller Flow](your-link-to-controller-flow)
-- [API Flow](your-link-to-api-flow)
+(https://lucid.app/lucidchart/1e9b0b51-86dc-4a85-8b13-76cd42737b86/edit?viewport_loc=-1203%2C-1020%2C2522%2C1214%2C0_0&invitationId=inv_f548936d-bfd9-4827-866a-7d49a96aa659)

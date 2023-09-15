@@ -83,7 +83,7 @@ The API provides the following endpoints:
 ### Create a New Person
 
 ```bash
-curl -X POST http://localhost:3000/persons -H "Content-Type: application/json" -d '{
+curl -X POST https://hng-stage-1s.vercel.app/persons -H "Content-Type: application/json" -d '{
   "name": "John Doe",
 }'
 ```
@@ -91,13 +91,13 @@ curl -X POST http://localhost:3000/persons -H "Content-Type: application/json" -
 ### Retrieve Details of a Person
 
 ```bash
-curl http://localhost:3000/persons/5f62d1c8950c230017409a60
+curl https://hng-stage-1s.vercel.app/persons/5f62d1c8950c230017409a60
 ```
 
 ### Update Details of an Existing Person
 
 ```bash
-curl -X PUT http://localhost:3000/persons/5f62d1c8950c230017409a60 -H "Content-Type: application/json" -d '{
+curl -X PUT https://hng-stage-1s.vercel.app/persons/5f62d1c8950c230017409a60 -H "Content-Type: application/json" -d '{
   "Name": "John Doe"
 }'
 ```
@@ -105,5 +105,5 @@ curl -X PUT http://localhost:3000/persons/5f62d1c8950c230017409a60 -H "Content-T
 ### Delete a Person
 
 ```bash
-curl -X DELETE http://localhost:3000/persons/5f62d1c8950c230017409a60
+curl -X DELETE https://hng-stage-1s.vercel.app/persons/5f62d1c8950c230017409a60
 ```
